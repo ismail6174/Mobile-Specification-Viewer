@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile Specs Viewer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #00ffe0;
+      text-shadow: 0 0 5px #00ffe0;
+    }
+
+    label {
+      font-size: 18px;
+      color: #ffda79;
+    }
+
+    select {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: #222;
+      color: #fff;
+      box-shadow: 0 0 5px rgba(255,255,255,0.2);
+      transition: background 0.3s;
+    }
+
+    select:hover {
+      background-color: #333;
+    }
+
+    .specs {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.5);
+      text-align: left;
+      display: inline-block;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .specs h2 {
+      color: #00ffd5;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    ul {
+      margin-left:12px;
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+      padding-left: 10px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: -20px;
+      color: #7efff5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1><i class="fas fa-mobile-alt"></i> Mobile Specification Viewer</h1>
+
+  <label for="brandSelect"><i class="fas fa-building"></i> Brand:</label>
+  <select id="brandSelect" onchange="loadModels()">
+    <option value="">--Select Brand--</option>
+  </select>
+
+  <br><br>
+
+  <label for="modelSelect"><i class="fas fa-mobile"></i> Model:</label>
+  <select id="modelSelect" onchange="showSpecs()">
+    <option value="">--Select Model--</option>
+  </select>
+
+  <div id="specsBox" class="specs" style="display:none;"></div>
+
+  <script src="app.js">
+    
+  </script>
+
+</body>
+</html>
